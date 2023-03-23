@@ -6,10 +6,11 @@ pipeline {
   stages { 
     stage('clone repository') {
 
-      steps { 
-        git 'https://github.com/gloriamutie/DevOps-W1.git',branch: 'master'
-      }
-    }
+    stage('clone repository from github'){
+            steps{
+                git url: 'https://github.com/gloriamutie/DevOps-W1.git', branch: 'master'
+            }
+        }
 
     stage('install dependencies'){
             steps{
