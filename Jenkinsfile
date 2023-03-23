@@ -29,6 +29,14 @@ pipeline {
                sh 'npm test'
             }
         }
+
+    stage('end  build'){
+            steps{
+                sh '''
+                echo "end build"
+                '''
+            }
+        }
         
         
   }
