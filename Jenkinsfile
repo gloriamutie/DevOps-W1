@@ -10,11 +10,6 @@ pipeline {
         git 'https://github.com/gloriamutie/DevOps-W1.git',branch: 'master'
       }
     }
-    stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
-            }
-        }
 
     stage('install dependencies'){
             steps{
@@ -30,14 +25,6 @@ pipeline {
             }
         }
 
-    stage('end  build'){
-            steps{
-                sh '''
-                echo "end build"
-                '''
-            }
-        }
-        
         
   }
 }
