@@ -1,9 +1,13 @@
 pipeline { 
   agent any
+   tools{
+        nodejs "node"
+    }
   stages { 
     stage('clone repository') {
+
       steps { 
-        git 'https://github.com/gloriamutie/DevOps-W1.git'
+        git 'https://github.com/gloriamutie/DevOps-W1.git',branch: 'master'
       }
     }
     stage('Install Dependencies') {
@@ -25,6 +29,7 @@ pipeline {
                sh 'npm test'
             }
         }
+        
         
   }
 }
