@@ -5,6 +5,7 @@ $(document).ready(function(){
     
     $("form").submit(function(e){
         // e.preventDefault()
+        //new comment
         var  name = $('input').val();
         var id = $('form').attr('data-id');
         fetch('/image/'+id, {
